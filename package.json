@@ -1,0 +1,26 @@
+{
+  "name": "physioactive-serv",
+  "version": "1.0.0",
+  "description": "Server of Physio Active Consultory",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "src --out-dir build",
+    "dev": "nodemon src/index.js"
+  },
+  "author": "Ing. Jose Ernesto Castro Alvis",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.8.3",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
