@@ -37,7 +37,8 @@ const teamSchema = new Schema({
     },
     fotoPerfil: {
         type: String,
-        default: "Imagen de fondo"
+        required: true,
+        default: "https://res.cloudinary.com/djnufglwv/image/upload/v1735163192/user_6543634_gk6cs4.png"
     }
 })
 
