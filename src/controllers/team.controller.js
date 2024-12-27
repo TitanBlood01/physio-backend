@@ -138,7 +138,7 @@ export const deleteMemberTeamById = async (req, res) => {
 
         if (deletedMember.fotoPerfil && !deletedMember.fotoPerfil.includes("default-profile.jpg")) {
             const publicId = deletedMember.fotoPerfil.split("/").pop().split(".")[0];
-            await cloudinary.uploader.destroy(`team-images/${publicId}`);
+            await cloudinary.uploader.destroy(`default-folder/${publicId}`);
         }
 
         res.status(200).json({ message: "Miembro del equipo eliminado exitosamente", deletedMember })

@@ -15,7 +15,8 @@ const serviceSchema = new Schema({
     },
     imageService: {
         type: String, 
-        required: true
+        required: true,
+        default: "https://res.cloudinary.com/djnufglwv/image/upload/v1735254302/defaults/detszww9dho8aaixt1k6.png"
     }
 },
 {
