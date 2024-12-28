@@ -175,6 +175,7 @@ export const superAdminSignIn = async (req, res) => {
 
         res.status(200).json({
             token,
+            role: "superAdmin",
             message: "Inicio de sesión exitoso",
         });
     } catch (error) {
