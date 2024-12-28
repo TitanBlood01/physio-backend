@@ -1,6 +1,5 @@
 import Team from "../models/team.js";
 import cloudinary from "../libs/cloudinary.config.js";
-Team.createIndexes();
 
 export const createMemberTeam = async (req, res) => {
     try {
