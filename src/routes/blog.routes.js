@@ -5,10 +5,10 @@ import upload from "../libs/multer.config.js";
 
 const router = Router();
 
-router.post("/", [authJwt.verifyToken ,authJwt.isAdminOrSuperAdmin, upload.array("imagenesBlog", 10)], blogCtrl.createBlog);
+router.post("/", [authJwt.verifyToken, upload.array("imagenesBlog", 10)], blogCtrl.createBlog);
 router.get("/", blogCtrl.getBlogs);
 router.get("/:blogId", blogCtrl.getBlogById);
-router.put("/:blogId", [authJwt.verifyToken ,authJwt.isAdminOrSuperAdmin, upload.array("imagenesBlog", 10)], blogCtrl.updateBlogById);
+router.put("/:blogId", [authJwt.verifyToken , upload.array("imagenesBlog", 10)], blogCtrl.updateBlogById);
 router.delete("/:blogId", [authJwt.verifyToken ,authJwt.isAdminOrSuperAdmin], blogCtrl.deleteBlogById);
 
 export default router;
